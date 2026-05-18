@@ -17,10 +17,11 @@ jobs:
       - name: Trigger Private Workflow via API
         run: |
           REPO="${{ secrets.PRIVATE_REPO }}"          
-          WORKFLOW="build-ota.yaml"
+          WORKFLOW="${{ secrets.PRIVATE_WORKFLOW }}" 
           
-          curl -X POST \
+          # 开启 -sSf 模式，如果 Token 权限不够或名字写错，这里会直接飘红报错，方便排查
+          curl -sSf -X POST \
             -H "Authorization: Bearer ${{ secrets.PAT }}" \
             -H "Accept: application/vnd.github.v3+json" \
             https://api.github.com/repos/$REPO/actions/workflows/$WORKFLOW/dispatches \
-            -d "{\"ref\":\"master\", \"inputs\": {\"job_type\": \"${{ github.event.inputs.job_type }}\"}}" # 👈 这里的 ref 已改成 master
+            -d "{\"ref\":\"master\", \"inputs\": {\"job_type\": \"${{ github.event.inputs.job_type }}\"}}"
