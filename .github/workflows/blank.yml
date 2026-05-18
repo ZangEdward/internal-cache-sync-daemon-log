@@ -1,0 +1,27 @@
+name: Trigger Private Build
+
+on:
+  workflow_dispatch:
+    inputs:
+      job_type:
+        description: "任务类型: build-only 或 ota"
+        required: true
+        default: "ota"
+        type: choice
+        options: [build-only, ota]
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Private Workflow via API
+        run: |
+          # 从 Secrets 中读取私人库信息，不留痕迹
+          REPO="${{ secrets.PRIVATE_REPO }}"          
+          WORKFLOW="${{ secrets.PRIVATE_WORKFLOW }}" 
+          
+          curl -X POST \
+            -H "Authorization: token ${{ secrets.PAT }}" \
+            -H "Accept: application/vnd.github.v3+json" \
+            https://api.github.com/repos/$REPO/actions/workflows/$WORKFLOW/dispatches \
+            -d "{\"ref\":\"main\", \"inputs\": {\"job_type\": \"${{ github.event.inputs.job_type }}\"}}"
