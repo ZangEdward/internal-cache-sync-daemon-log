@@ -1,4 +1,4 @@
-name: Trigger Private Build
+name: Remote Private Build
 
 on:
   workflow_dispatch:
@@ -16,12 +16,11 @@ jobs:
     steps:
       - name: Trigger Private Workflow via API
         run: |
-          # 从 Secrets 中读取私人库信息，不留痕迹
           REPO="${{ secrets.PRIVATE_REPO }}"          
-          WORKFLOW="${{ secrets.PRIVATE_WORKFLOW }}" 
+          WORKFLOW="build-ota.yaml"
           
           curl -X POST \
-            -H "Authorization: token ${{ secrets.PAT }}" \
+            -H "Authorization: Bearer ${{ secrets.PAT }}" \
             -H "Accept: application/vnd.github.v3+json" \
             https://api.github.com/repos/$REPO/actions/workflows/$WORKFLOW/dispatches \
-            -d "{\"ref\":\"main\", \"inputs\": {\"job_type\": \"${{ github.event.inputs.job_type }}\"}}"
+            -d "{\"ref\":\"master\", \"inputs\": {\"job_type\": \"${{ github.event.inputs.job_type }}\"}}" # 👈 这里的 ref 已改成 master
