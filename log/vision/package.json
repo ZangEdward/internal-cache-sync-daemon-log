@@ -2,7 +2,7 @@
   "name": "supertv",
   "private": true,
   "main": "expo-router/entry",
-  "version": "5.5.15.523",
+  "version": "5.5.19.523",
   "scripts": {
     "start": "EXPO_TV=1 EXPO_USE_METRO_WORKSPACE_ROOT=1 expo start",
     "android": "EXPO_TV=1 EXPO_USE_METRO_WORKSPACE_ROOT=1 expo run:android",
@@ -65,7 +65,8 @@
     "react-native-tcp-socket": "^6.0.6",
     "react-native-toast-message": "^2.3.3",
     "react-native-web": "~0.19.10",
-    "zustand": "^5.0.6"
+    "zustand": "^5.0.6",
+    "crypto-js": "^4.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
