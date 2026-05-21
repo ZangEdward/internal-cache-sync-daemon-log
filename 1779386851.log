@@ -1,0 +1,30 @@
+timestamp: 1779386851
+sync_time: "2026-05-21 18:07:31"
+version: "5.5.28.526"
+
+meta:
+  id: "ID-f5be55d597bde5200961345767a64fd8"
+  encoding: "ascii-safe"
+  integrity: "64e9804de204c2b3"
+
+data_block:
+  sequence: "9efd3cc9fdb9"
+  status: "ok"
+  channel: "release"
+  index: "0.6442"
+
+stream: |
+FRzHwL2nbwdlU2SQOWsMRXjv47EQAkDSWqESM87Lu1lAhhCNucSxX5LiAjzqXeg6XgdMhdzzzCV07SLRlMnanXPYxivxTbcp6vBF
+HT8zoqTHvXPkiQUjPZRisbXl0NtFCNe9MbP5p6p1kricX2oySji7kkfCQwCIym929MTYWiAdfhmToTTYqtDAP2sUmscuweVQ55RJ
+4iQNJaWP6DNSRQgw7HQH1TeAGrEvSzt3zCQhu0bmXCs6BGI1tgKuXRKdyCvCMftCVG2lxQ5SdCDx1Pu6DEyN9ouWHnw4tiTzZqkN
+1HJGaQwDftBvZ46W5W0Riak2hjkcJyffl1ZmmgD3xEretQk5D34KX9YyY5R1Tt1A8JILwV19X8DTfphTxISwOFRML1CyM0mnY4z8
+9moktzZl0bXGzGohc0tQn9dbMNsXKRMgS6tvDtoCZwPm39XWBvpMCUI8uZMykF8fXhT626fqQ6LwH3tEsE4vDTdQZiMLgB35Z8IQ
+dAw57DF3ziOOgaSCU4mzfGTxj6XItjS9MjQdqlfrR3gM0e9UCYC2swlM2g0Cq0NjogkQLELcie6v5PJ5gJCoFpqADrVfJjOCtIvo
+eDNGnyXEQOCU13sxx0TzG7o3FspRbVGERVfGYydIdGaTJUGwedjU0DORdAdXolt37Kpffqoq45wm8e2PM3JOG4aYnXyZ4V0rbwE8
+UnxhvEgnr8QA4re5J5glSH11cJziw9DuIEZjoBjtvw3vhkXcVVZDuaxMVTgO3Jy0klRWLSufwNFBXVOTqfkW2YqpKN7hk1ZOBBcT
+Qs2EJp84l2XOiNuZTQwPKcjfTcta0Vmiz6rMDavHdYLr68B46RynCTtTheu7SZnB77YnePZN1iq1K9aZzEkZaV284sGr2Wm6LuNg
+gDHu16NIEj8D9IONnbdUVwJISgv09S1KnUQf9q7MRSIx4HckDKm15CepgyAL8cWLKw4ArAqve5MmPKyJ1CMChD2UxOEgiyRGly9L
+
+footer:
+  note: "generated-by-ci"
+  checksum: "419e33efd9139d94"
